@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #0F172A;
+    --card-color: #1E293B;
+    --accent-color: #4F46E5;
+    --accent-hover: #4338CA;
+    --text-color: #F8FAFC;
+    --text-muted: #94A3B8;
+    --success: #10B981;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--card-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.result-container {
+    background-color: var(--bg-color);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+}
+
+#password-display {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    word-break: break-all;
+    user-select: all;
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-large {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.settings {
+    margin-bottom: 20px;
+}
+
+.setting {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.setting label {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.setting input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.setting input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.strength-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+#strength-indicator {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.strength-weak { color: var(--danger); background: rgba(239, 68, 68, 0.1); }
+.strength-medium { color: var(--warning); background: rgba(245, 158, 11, 0.1); }
+.strength-strong { color: var(--success); background: rgba(16, 185, 129, 0.1); }
