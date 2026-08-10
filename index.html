@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas | Alura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+        
+        <div class="result-container">
+            <span id="password-display">SuaSenhaAqui</span>
+            <button id="copy-btn" class="btn">Copiar</button>
+        </div>
+
+        <div class="settings">
+            <div class="setting">
+                <label>Comprimento da senha: <span id="length-val">12</span></label>
+                <input type="range" id="length-slider" min="6" max="32" value="12">
+            </div>
+            
+            <div class="setting">
+                <label>
+                    <input type="checkbox" id="uppercase" checked>
+                    Incluir Letras Maiúsculas (A-Z)
+                </label>
+            </div>
+
+            <div class="setting">
+                <label>
+                    <input type="checkbox" id="lowercase" checked>
+                    Incluir Letras Minúsculas (a-z)
+                </label>
+            </div>
+
+            <div class="setting">
+                <label>
+                    <input type="checkbox" id="numbers" checked>
+                    Incluir Números (0-9)
+                </label>
+            </div>
+
+            <div class="setting">
+                <label>
+                    <input type="checkbox" id="symbols" checked>
+                    Incluir Símbolos (!@#$%)
+                </label>
+            </div>
+        </div>
+
+        <div class="strength-container">
+            <span>Força da Senha:</span>
+            <span id="strength-indicator" class="strength-medium">Média</span>
+        </div>
+
+        <button id="generate-btn" class="btn btn-large">Gerar Senha</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
